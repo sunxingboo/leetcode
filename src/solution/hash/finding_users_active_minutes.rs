@@ -9,7 +9,7 @@ impl Solution {
         for log in logs {
             let (user_id, time) = (log[0], log[1]);
 
-            let mut minutes = m.entry(user_id).or_insert(HashMap::new());
+            let minutes = m.entry(user_id).or_insert(HashMap::new());
 
             minutes.insert(time, true);
         }
